@@ -1,0 +1,1663 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Club Arena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--<![endif-->
+    <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" name="viewport">
+    <meta name="viewport" content="width=device-width">
+    <meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+
+    <style type="text/css">
+        /* CUSTOM FONTS */
+
+        @font-face {
+            font-family: 'SofiaPro';
+            font-style: normal;
+            font-weight: normal;
+            src: url('fonts/SofiaProRegular-english.woff2') format('woff');
+        }
+
+        @font-face {
+            font-family: 'SofiaPro';
+            font-style: normal;
+            font-weight: 500;
+            src: url('fonts/SofiaProMedium-english.woff2') format('woff');
+        }
+
+        @font-face {
+            font-family: 'SofiaPro';
+            font-style: normal;
+            font-weight: 600;
+            src: url('fonts//SofiaProSemiBold-english.woff2') format('woff');
+        }
+
+        @font-face {
+            font-family: 'SofiaPro';
+            font-style: normal;
+            font-weight: bold;
+            src: url('fonts/SofiaProBold-english.woff2') format('woff');
+        }
+
+        /* FONT STYLING  */
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+    </style>
+    <style type="text/css">
+        /* FULL WIDTH CLASSES */
+        @media (max-width: 2200px) {
+            .ow100 {
+                width: 100%;
+            }
+
+            .ow50 {
+                width: 50%;
+            }
+
+            .ow80 {
+                width: 90%;
+            }
+
+            .ow70 {
+                width: 70%;
+            }
+
+            *[class~=opadt] {
+                padding-top: 45px !important;
+            }
+
+            *[class~=onegmargt] {
+                margin-top: -40px;
+            }
+
+            *[class~=oheight] {
+                height: 135px;
+            }
+        }
+
+        /* DARK MODE OPTOMIZATION */
+        u+.body .gmail-blend-screen {
+            background: #000;
+            mix-blend-mode: screen;
+        }
+
+        u+.body .gmail-blend-difference {
+            background: #000;
+            mix-blend-mode: difference;
+        }
+
+        /* Ensure tables don’t have any extra spacing */
+        table {
+            border-collapse: collapse;
+        }
+
+        /* Ensure no unwated margins on all copy*/
+        p,
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Ensure that images don’t have borders, text-decoration and unwanted spacing */
+        img,
+        a img {
+            border: 0 !important;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+
+        /* Ensure the main body container has correct fallbacks*/
+        body,
+        #bodyTable {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Allow smoother rendering of resized image in IE */
+        img {
+            -ms-interpolation-mode: bicubic;
+        }
+
+        /* Remove spacing between tables in Outlook 2007 and up */
+        table,
+        td {
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        p,
+        a,
+        li,
+        td,
+        body,
+        table {
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        a[x-apple-data-detectors] {
+            color: inherit !important;
+            text-decoration: none !important;
+            font-size: inherit !important;
+            font-family: inherit !important;
+            font-weight: inherit !important;
+            line-height: inherit !important;
+        }
+    </style>
+    <style type="text/css">
+        /* FONT STYLING  */
+        h1 {
+            color: #000001;
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 46px;
+            font-style: normal;
+            font-weight: bold;
+            line-height: 52px;
+            letter-spacing: normal;
+            margin: 0;
+        }
+
+        h2 {
+            color: #000001;
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 30px;
+            letter-spacing: normal;
+        }
+
+        h3 {
+            color: #000001;
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 125%;
+            letter-spacing: normal;
+        }
+
+        h4 {
+            color: #000001;
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+            letter-spacing: normal;
+        }
+
+        p {
+            font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 150%;
+            word-break: break-word;
+        }
+    </style>
+    <style type="text/css">
+        /* HOVERS EFFECTS */
+        .button-border-black:hover {
+            background: black !important;
+            border: 2px solid white !important;
+            transition: all 0.2s ease-in-out;
+
+        }
+
+        .button-border-black:hover .buttontext-black {
+            color: white !important;
+        }
+
+        .footer-hover:hover {
+            border-bottom: 2px solid #fff !important;
+            padding-bottom: 1px;
+        }
+
+        .product-container-hover:hover {
+            border: solid 20px white !important;
+            background: #fbf8f5 !important;
+        }
+
+        .opacity:hover {
+            opacity: .9 !important;
+        }
+
+        /* TABLET - MAIN CLASSES */
+        @media (max-width: 599px) {
+            .w100 {
+                width: 100% !important;
+            }
+
+            .w95 {
+                width: 95% !important;
+            }
+
+            .w90 {
+                width: 90% !important;
+            }
+
+            .w85 {
+                width: 85% !important;
+            }
+
+            .w80 {
+                width: 80% !important;
+            }
+
+            .w75 {
+                width: 75% !important;
+            }
+
+            .w70 {
+                width: 70% !important;
+            }
+
+            .column33 {
+                width: 33% !important;
+            }
+
+            .column50 {
+                width: 50% !important;
+            }
+
+            .column66 {
+                width: 66% !important;
+            }
+
+            .wbutton {
+                width: 55% !important;
+            }
+
+            .padt0 {
+                padding-top: 0px !important;
+            }
+
+            .padt5 {
+                padding-top: 5px !important;
+            }
+
+            .padt10 {
+                padding-top: 10px !important;
+            }
+
+            .padt15 {
+                padding-top: 15px !important;
+            }
+
+            .padt20 {
+                padding-top: 20px !important;
+            }
+
+            .padt25 {
+                padding-top: 25px !important;
+            }
+
+            .padt30 {
+                padding-top: 30px !important;
+            }
+
+            .padt35 {
+                padding-top: 35px !important;
+            }
+
+            .padt40 {
+                padding-top: 40px !important;
+            }
+
+            .padb0 {
+                padding-bottom: 0px !important;
+            }
+
+            .padb5 {
+                padding-bottom: 5px !important;
+            }
+
+            .padb10 {
+                padding-bottom: 10px !important;
+            }
+
+            .padb15 {
+                padding-bottom: 15px !important;
+            }
+
+            .padb20 {
+                padding-bottom: 20px !important;
+            }
+
+            .padb25 {
+                padding-bottom: 25px !important;
+            }
+
+            .padb30 {
+                padding-bottom: 30px !important;
+            }
+
+            .padb35 {
+                padding-bottom: 35px !important;
+            }
+
+            .padb40 {
+                padding-bottom: 40px !important;
+            }
+
+            .tcenter {
+                text-align: center !important;
+            }
+
+            .tleft {
+                text-align: left !important;
+            }
+
+            .mobile-hide {
+                display: none !important;
+            }
+
+            .showm {
+                display: block !important;
+                max-height: 1000px !important;
+                width: 100% !important;
+                overflow: visible !important;
+            }
+
+            .showmm {
+                display: block !important;
+                max-height: 1000px !important;
+                overflow: visible !important;
+            }
+
+            .himslogo {
+                width: 70px !important;
+            }
+        }
+
+        /* MOBILE - MAIN CLASSES */
+        @media (max-width: 560px) {
+            .coulumn50 {
+                width: 100% !important;
+            }
+
+            .w100m,
+            .coulumn50 {
+                width: 100% !important;
+            }
+
+            u+.body .full-wrap {
+                width: 100% !important;
+                width: 100vw !important;
+            }
+        }
+    </style>
+    <style type="text/css">
+        /* Ensure large text on mb stays large if user choose to make large */
+        @media only screen and (max-width: 480px) {
+
+            body,
+            table,
+            td,
+            p,
+            a,
+            li,
+            blockquote {
+                -webkit-text-size-adjust: none !important;
+            }
+        }
+
+        /* TABLET - FONT SIZES */
+        @media only screen and (max-width: 599px) {
+            h1 {
+                font-size: 40px !important;
+            }
+
+            h2 {
+                font-size: 28px !important;
+            }
+
+            h3 {
+                font-size: 20px !important;
+            }
+
+            h4 {
+                font-size: 14px !important;
+            }
+
+            p {
+                font-size: 18px !important;
+            }
+        }
+
+        /* MOBILE - FONT SIZES */
+        @media only screen and (max-width: 380px) {}
+    </style>
+    <style type="text/css">
+        /* CUSTOM */
+        @media only screen and (max-width:599px) {
+            .bkg-black {
+                background-color: #000000 !important;
+                border-radius: 22px 22px 0 0 !important;
+            }
+
+            .padb50 {
+                padding-bottom: 50px !important;
+            }
+
+            .w20 {
+                width: 20px !important;
+            }
+
+            .padl8 {
+                padding-left: 8px !important;
+            }
+
+            .eyebrow {
+                width: 48px !important;
+                height: 26px !important
+            }
+        }
+
+        @media only screen and (max-width: 380px) {}
+    </style>
+
+
+</head>
+
+<body id="bodyTable" class="body"
+    style="-webkit-text-size-adjust: none;-ms-text-size-adjust: none; margin: 0; padding: 0; width: 100%; background-color: #FFFFFF;">
+    <div
+        style="display:none !important;visibility:hidden;mso-hide:all;font-size:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:0;overflow:hidden;">
+        Introducing Testosterone Rx with enclomiphene.</div>
+    <span class="hidden"
+        style="display: none !important; mso-hide: all; height: 0; max-height: 0; visibility: hidden; overflow: hidden;">&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;
+    </span>
+
+    <!-- *** GLOBAL HEADER *** -->
+
+    <!-- *** /GLOBAL HEADER *** -->
+
+    <!-- *** HEADER TABLE *** -->
+    <table class="full-wrap" cellpadding="0" cellspacing="0" border="0" width="100%"
+        style="background-color: #FFFFFF; width: 100%;">
+
+        <!-- === LOGO === --->
+        <tr class="mobile-hide">
+            <td align="center">
+                <table align="center" cellpadding="0" cellspacing="0" border="0" width="90%">
+                    <tr>
+                        <td class="" align="center">
+                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td>
+                                        <table class="w95" width="80%" border="0" align="center" cellpadding="0"
+                                            cellspacing="0">
+                                            <tr>
+                                                <td class="padt15 padb15" align="center"
+                                                    style="padding-top: 20px; padding-bottom: 20px;">
+                                                    <a href="#" target="_blank"
+                                                        style="font-size: 24px; text-align:center; color: #000; font-family: Georgia, serif; font-weight: 600;">
+                                                        <img class="himslogo" src="logo.png" alt="hims" width="70"
+                                                            role="presentation" aria-hidden="true"
+                                                            style="border: none; width: 150px; max-width: 100%;">
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!-- === /LOGO === --->
+    </table>
+
+    <!-- *** /HEADER TABLE *** -->
+
+    <!-- *** MAIN TABLE *** -->
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+        style="background-color: #FFFFFF; width: 100%;">
+        <tr>
+            <td class="padb15" align="center" style="padding: 0 0 60px 0;">
+                <table class="w100 boxshadow" align="center" cellpadding="0" cellspacing="0" border="0" width="700"
+                    style="background-color: #01893b; border-radius: 20px;">
+
+                    <!--- === LOGO - MOBILE === --->
+                    <tr>
+                        <td class="showm" align="center"
+                            style="padding-top: 16px; padding-bottom: 16px; display: none;">
+                            <a href="#" target="_blank">
+                                <img class="himslogo" src="logo.svg" alt="hims" role="presentation" aria-hidden="true"
+                                    style="border: none; width: 150px !important; ">
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!--- === /LOGO - MOBILE === --->
+                    <tr>
+                        <td class="padt40 padb30" align="center" style="padding-top: 60px;">
+                            <table class="w90" width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                                <!--- *EYEBROW*--->
+                                <tr>
+                                    <td class="padb5" align="center" valign="top" style="padding-bottom: 10px;">
+                                        <table class="eyebrow" width="60" height="32" align="center" border="0"
+                                            cellspacing="0" cellpadding="0" bgcolor="#FFE484"
+                                            style="background-color:#FAE8A1; border-radius: 100px;">
+                                            <tr>
+                                                <td valign="middle" align="center"
+                                                    style="font-family:'SofiaPro','Helvetica Neue', Helvetica, Arial, sans-serif; border-radius: 100px;">
+                                                    <h4
+                                                        style="font-size:16px; line-height:115%; font-weight: 500; color:#0A2633; text-transform: uppercase; letter-spacing: 1px;">
+                                                        New</h4>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!--- */EYEBROW* --->
+
+                                <!--- *HEADLINE* --->
+                                <tr>
+                                    <td align="center" class="padb20"
+                                        style="padding: 0 0 16px; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                        <h1
+                                            style="font-size: 62px; line-height: 105%; font-weight: 600; letter-spacing: -1.75px; color: #fff;">
+                                            New Features in <br>Club Arena
+                                        </h1>
+                                    </td>
+                                </tr>
+
+                                <!--- *BODY* --->
+                                <tr>
+                                    <td align="center">
+                                        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+
+                                            <!-- copy -->
+                                            <tr>
+                                                <td align="center"
+                                                    style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0 0 24px;">
+                                                    <p
+                                                        style="font-size: 20px; line-height: 130%; font-weight: normal; color: #fff;">
+                                                        New improvements and features that
+                                                        make <br /> club administration easier and more efficient for
+                                                        you.
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!--- */BODY* --->
+
+                                <!--- *CTA CONTAINER* --->
+                                <tr>
+                                    <td style="padding-bottom: 4px;">
+                                        <table class="w100" width="322" border="0" align="center" cellpadding="0"
+                                            cellspacing="0">
+                                            <tr>
+                                                <td valign="top">
+
+                                                    <!-- object 1 -->
+                                                    <table class="w100" width="152" border="0" align="left"
+                                                        cellpadding="0" cellspacing="0" style="float: left;">
+                                                        <tr>
+                                                            <td>
+                                                                <table class="w100" width="80%" border="0" align="left"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0"
+                                                                                align="center" cellpadding="0"
+                                                                                cellspacing="0">
+                                                                                <tr>
+                                                                                    <td align="center" class="padb10"
+                                                                                        style="padding-bottom:20px;"
+                                                                                        valign="top">
+                                                                                        <table class="w100" width="152"
+                                                                                            align="center" border="0"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0"
+                                                                                            bgcolor="#ffffff"
+                                                                                            style="background-color:#fff;border-radius: 100px;">
+
+                                                                                            <!--- cta --->
+                                                                                            <tr>
+                                                                                                <td valign="middle"
+                                                                                                    align="center"
+                                                                                                    height="48"
+                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;border-radius: 100px;">
+                                                                                                    <a class="button-border-black"
+                                                                                                        href="#"
+                                                                                                        target="_blank"
+                                                                                                        style="color:#000000;display:block;text-decoration:none;line-height:44px; border: 1px solid #fff; border-radius: 100px;"><span
+                                                                                                            class="buttontext-black"
+                                                                                                            style="color: #000;font-weight: 600;">Get
+                                                                                                            started</span></a>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /cta --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+
+                                                    <!-- object 1 -->
+
+                                                    <!--[if mso]></td>
+                          <td valign="top"><![endif]-->
+
+                                                    <!-- object 2 -->
+                                                    <table class="w100" width="154" border="0" align="right"
+                                                        cellpadding="0" cellspacing="0" style="float: right;">
+                                                        <tr>
+                                                            <td>
+                                                                <table class="w100" width="80%" border="0" align="right"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0"
+                                                                                align="center" cellpadding="0"
+                                                                                cellspacing="0">
+                                                                                <tr>
+                                                                                    <td align="center" valign="top">
+                                                                                        <table class="w100" width="154"
+                                                                                            align="center" border="0"
+                                                                                            cellspacing="0"
+                                                                                            cellpadding="0">
+
+                                                                                            <!--- button --->
+                                                                                            <tr>
+                                                                                                <td valign="middle"
+                                                                                                    align="center"
+                                                                                                    height="48"
+                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;border-radius: 100px;">
+                                                                                                    <a class="button-border-black"
+                                                                                                        href="#"
+                                                                                                        target="_blank"
+                                                                                                        style="color:#fff;font-weight: 600; display:block;text-decoration:none;line-height:44px; border: 2px solid #fff; border-radius: 100px; "><span
+                                                                                                            class="buttontext-black">Learn
+                                                                                                            more</span></a>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /button --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table> <!-- /object 2 -->
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!--- */CTA CONTAINER* --->
+
+                    <!-- *IMG CONTAINER* -->
+                    <tr>
+                        <td
+                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF;">
+
+                            <!--- img - desktop--->
+                            <img class="mobile-hide" src="original.jpeg" width="700"
+                                style="width: 100%; max-width: 700px; height: auto; display: block;" alt="Hims">
+
+                            <!--- /img - desktop --->
+
+                            <!--- img - mobile--->
+                            <img class="showm" src="original.jpeg" width="700"
+                                style="width: 100%; max-width: 700px; height: auto; display: none;" alt="Hims">
+
+                            <!--- /img - mobile --->
+
+                        </td>
+                    </tr>
+
+                    <!-- */IMG CONTAINER* -->
+
+                    <!-- *INSET CONTAINER* -->
+                    <tr>
+                        <td class="" align="center" style="background-color: #D7E4EC;">
+                            <table class="w90" width="620" border="0" align="center" cellpadding="0" cellspacing="0"
+                                style="background: rgba(255, 255, 255, .8); border-radius: 20px;">
+                                <tr>
+                                    <td class="padt25" style="padding: 60px 0 0 0;">
+                                        <table class="w90" width="540" border="0" align="center" cellpadding="0"
+                                            cellspacing="0">
+
+                                            <!-- headline -->
+                                            <tr>
+                                                <td align="center" style="padding: 0 0 16px 0;">
+                                                    <h2
+                                                        style="color: #0A2633; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0px; margin: 0; font-size: 32px; font-weight: 400; line-height: 100%; letter-spacing: -0.5px; text-align: left;">
+                                                        New updates <span style="color: #6D8D9E;">includes</span>
+                                                    </h2>
+                                                </td>
+                                            </tr>
+
+                                            <!-- headline -->
+
+                                            <!-- bullets -->
+                                            <tr>
+                                                <td class="padb40" style="padding-bottom: 48px;">
+                                                    <table border="0" align="left" cellpadding="0" cellspacing="0">
+
+                                                        <!-- bullet -->
+                                                        <tr>
+                                                            <td style="padding: 0 0 16px 0;">
+                                                                <table border="0" align="left" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="33" valign="top"
+                                                                            style="padding: 2px 0 0 0; line-height: 130%; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                                            <img class="w20" src="tik.png"
+                                                                                alt="checkmark" width="22"
+                                                                                role="presentation" aria-hidden="true"
+                                                                                style="border: none; display: block;">
+                                                                        </td>
+                                                                        <td
+                                                                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left;">
+                                                                            <p
+                                                                                style="font-size: 20px; font-weight: 400; line-height: 130%; color: #555759;">
+                                                                                Improved Club Details Page
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr> <!-- /bullet -->
+
+                                                        <!-- bullet -->
+                                                        <tr>
+                                                            <td style="padding: 0 0 16px 0;">
+                                                                <table border="0" align="left" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="33" valign="top"
+                                                                            style="padding: 2px 0 0 0; line-height: 130%; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                                            <img class="w20" src="tik.png"
+                                                                                alt="checkmark" width="22"
+                                                                                role="presentation" aria-hidden="true"
+                                                                                style="border: none; display: block;">
+                                                                        </td>
+                                                                        <td
+                                                                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left;">
+                                                                            <p
+                                                                                style="font-size: 20px; font-weight: 400; line-height: 130%; color: #555759;">
+                                                                                Payment Methods and Subscriptions
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr> <!-- /bullet -->
+
+                                                        <!-- bullet -->
+                                                        <tr>
+                                                            <td style="padding:0;">
+                                                                <table border="0" align="left" cellpadding="0"
+                                                                    cellspacing="0">
+                                                                    <tr>
+                                                                        <td width="33" valign="top"
+                                                                            style="padding: 2px 0 0 0; line-height: 130%; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                                            <img class="w20" src="tik.png"
+                                                                                alt="checkmark" width="22"
+                                                                                role="presentation" aria-hidden="true"
+                                                                                style="border: none; display: block;">
+                                                                        </td>
+                                                                        <td
+                                                                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left;">
+                                                                            <p
+                                                                                style="font-size: 20px; font-weight: 400; line-height: 130%; color: #555759;">
+                                                                                Allocation for Field Administration
+                                                                            </p>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr> <!-- /bullet -->
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- bullets -->
+
+                                            <!-- headline -->
+                                            <tr>
+                                                <td align="center" style="padding: 0 0 12px 0;">
+                                                    <h2
+                                                        style="color: #0A2633; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0px; margin: 0; font-size: 32px; font-weight: 400; line-height: 100%; letter-spacing: -0.5px; text-align: left;">
+                                                        Improved <span style="color: #789299;"> Help Center</span>
+                                                    </h2>
+                                                </td>
+                                            </tr> <!-- /headline -->
+
+                                            <!-- body -->
+                                            <tr>
+                                                <td align="center" style="padding: 0 0 24px 0;">
+                                                    <p
+                                                        style="color: #555759; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 0px; margin: 0; font-size: 18px; font-weight: 400; line-height: 130%; text-align: left;">
+                                                        Access updated guides, smart tips, and an expanded FAQ directly
+                                                        from the system whenever you need it.</p>
+                                                </td>
+                                            </tr> <!-- /body -->
+
+                                            <!-- cta -->
+                                            <tr>
+                                                <td align="center" style="padding: 0 0 24px;" valign="top">
+                                                    <table class="w100" width="152" align="left" border="0"
+                                                        cellspacing="0" cellpadding="0" bgcolor="#000000"
+                                                        style="background-color:#000000;border-radius: 100px;">
+
+                                                        <!--- cta --->
+                                                        <tr>
+                                                            <td valign="middle" align="center" height="48"
+                                                                style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;border-radius: 100px;">
+                                                                <a class="button-border-black" href="#" target="_blank"
+                                                                    style="color:#000000;display:block;text-decoration:none;line-height:44px; border: 1px solid #000000; border-radius: 100px;"><span
+                                                                        class="buttontext-black"
+                                                                        style="color: #FFFFFF;">Get started</span></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- cta -->
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- img -->
+                                <tr>
+                                    <td
+                                        style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 16px; color: #FFFFFF;">
+
+
+                                        <img class="mobile-hide" src="club.png" width="620"
+                                            style="width: 100%; max-width: 620px; height: auto; display: block; border-radius: 0 0 20px 20px"
+                                            alt="Hims">
+
+                                        <!--[if !mso]>
+
+<!-->
+                                        <img class="showm" src="club.png" width="620"
+                                            style="width: 100%; max-width: 620px; height: auto; display: block; border-radius: 0 0 20px 20px; display: none;"
+                                            alt="Hims">
+
+
+                                    </td>
+                                </tr> <!-- /img -->
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- */INSET CONTAINER* -->
+
+                    <!-- *INSET CONTAINER* -->
+                    <tr>
+                        <td class="padt30 padb20" align="center"
+                            style="padding: 24px 0 40px; background-color: #D7E4EC; border-radius: 0 0 20px 20px;">
+                            <table class="w90" width="620" border="0" align="center" cellpadding="0" cellspacing="0"
+                                style="background: rgba(255, 255, 255, .8); border-radius: 20px;">
+
+                                <!-- two pack -->
+                                <tr>
+                                    <td class="padb15" style="padding: 20px 0;">
+                                        <table class="w90" width="580" border="0" align="center" cellpadding="0"
+                                            cellspacing="0">
+                                            <tr>
+                                                <td align="center">
+                                                    <table width="100%" border="0" align="center" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td valign="top">
+
+                                                                <!-- object 1 --->
+                                                                <table class="w100" width="300" border="0" align="left"
+                                                                    cellpadding="0" cellspacing="0" style="float: left">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0"
+                                                                                align="center" cellpadding="0"
+                                                                                cellspacing="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table class="w100" width="280"
+                                                                                            border="0" align="center"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!--- headline --->
+                                                                                            <tr>
+                                                                                                <td>
+                                                                                                    <table class="w95"
+                                                                                                        width="256"
+                                                                                                        border="0"
+                                                                                                        align="left"
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0">
+                                                                                                        <tr>
+                                                                                                            <td class="padt5"
+                                                                                                                align="left"
+                                                                                                                style="padding-bottom: 8px; padding-top: 20px;">
+                                                                                                                <table
+                                                                                                                    width="100%"
+                                                                                                                    border="0"
+                                                                                                                    align="center"
+                                                                                                                    cellpadding="0"
+                                                                                                                    cellspacing="0">
+                                                                                                                    <tr>
+                                                                                                                        <td
+                                                                                                                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left;">
+                                                                                                                            <h2
+                                                                                                                                style="font-size: 32px; line-height: 105%; font-weight: 400; color: #0A2633;">
+                                                                                                                                Improved
+                                                                                                                                Club
+
+                                                                                                                                <span
+                                                                                                                                    style="color: #789299;">Details
+                                                                                                                                    Page</span>
+                                                                                                                            </h2>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /headline --->
+
+                                                                                            <!--- body --->
+                                                                                            <tr>
+                                                                                                <td class="padb25"
+                                                                                                    align="left"
+                                                                                                    style="padding-bottom: 24px;">
+                                                                                                    <table class="w95"
+                                                                                                        width="90%"
+                                                                                                        border="0"
+                                                                                                        align="left"
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: left; font-size: 18px; line-height: 130%; font-weight: 400; color: #555759;">
+                                                                                                                A new
+                                                                                                                and more
+                                                                                                                user-friendly
+                                                                                                                design
+                                                                                                                that
+                                                                                                                makes it
+                                                                                                                easier
+                                                                                                                to find
+                                                                                                                the
+                                                                                                                club’s
+                                                                                                                resources,
+                                                                                                                settings,
+                                                                                                                and
+                                                                                                                information.
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /body --->
+
+                                                                                            <!-- cta -->
+                                                                                            <tr>
+                                                                                                <td align="center"
+                                                                                                    class="padb30"
+                                                                                                    style="padding: 0 0 20px;"
+                                                                                                    valign="top">
+                                                                                                    <table class="w100"
+                                                                                                        width="152"
+                                                                                                        align="left"
+                                                                                                        border="0"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0"
+                                                                                                        bgcolor="#000000"
+                                                                                                        style="background-color:#000000;border-radius: 100px;">
+
+                                                                                                        <!--- cta --->
+                                                                                                        <tr>
+                                                                                                            <td valign="middle"
+                                                                                                                align="center"
+                                                                                                                height="48"
+                                                                                                                style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:16px;line-height:20px;border-radius: 100px;">
+                                                                                                                <a class="button-border-black"
+                                                                                                                    href="#"
+                                                                                                                    target="_blank"
+                                                                                                                    style="color:#FFFFFF;display:block;text-decoration:none;line-height:44px; border: 1px solid #000000; border-radius: 100px;"><span
+                                                                                                                        class="buttontext-black"
+                                                                                                                        style="color: #FFFFFF;">Get
+                                                                                                                        started</span></a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!-- cta -->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- object 1 --->
+
+                                                                <!--[if mso]></td>
+                                <td valign="top"><![endif]-->
+
+                                                                <!-- object 2 --->
+                                                                <table class="w100" width="280" border="0" align="right"
+                                                                    cellpadding="0" cellspacing="0"
+                                                                    style="float: right">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0" align="left"
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td class="padb0">
+                                                                                        <table class="w100" width="100%"
+                                                                                            border="0" align="center"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!-- img -->
+                                                                                            <tr>
+                                                                                                <td align="center">
+
+
+                                                                                                    <img class="w100"
+                                                                                                        src="details.jpg"
+                                                                                                        alt="Hims"
+                                                                                                        width="280"
+                                                                                                        role="presentation"
+                                                                                                        aria-hidden="true"
+                                                                                                        style="border: none; border-radius: 20px; font-size: 16px; line-height: 105%; font-weight: normal; letter-spacing: -0.5px; color: #FFFFFF; font-family: Helvetica, Arial, sans-serif, 'CustomFont'; text-decoration: none; vertical-align: bottom;">
+
+                                                                                                </td>
+                                                                                            </tr> <!-- /img -->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- object 2 --->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                <!-- */INSET CONTAINER* -->
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- *** /MAIN TABLE *** -->
+
+    <!-- *** FOOTER TABLE *** -->
+    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"
+        style="background-color: ; width: 100%; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;">
+        <tr>
+            <td>
+                <table class="full-wrap" cellpadding="0" cellspacing="0" border="0" width="100%"
+                    style="background-color: #000; width: 100%; border-radius: 20px;">
+                    <tr>
+                        <td align="center">
+                            <table class="w100" cellpadding="0" cellspacing="0" border="0" width="700">
+                                <tr>
+                                    <td align="center">
+                                        <table class="w90" align="center" cellpadding="0" cellspacing="0" border="0"
+                                            width="700">
+
+                                            <!-- === DISCLAIMER 1 === --->
+                                            <tr>
+                                                <td class="padt15"
+                                                    style="color: rgba(255, 255, 255, 0.90); font-family: 'SofiaPro', Helvetica, Arial, sans-serif !important; text-align: left; font-size: 12px !important; line-height: 130% !important; padding-top: 40px; padding-bottom: 0px; font-weight: normal;">
+                                                    *Club Arena is designed to simplify club management and enhance
+                                                    member engagement. Features and functionality may vary depending on
+                                                    your club’s subscription plan. Always review your plan details
+                                                    before making administrative changes. <a href='#'
+                                                        style='text-decoration: underline; color: inherit;'
+                                                        target='_blank'>Source</a>.
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /DISCLAIMER 1 === --->
+
+                                            <!-- === DISCLAIMER 2 === --->
+                                            <tr>
+                                                <td
+                                                    style="color: rgba(255, 255, 255, 0.90); font-family: 'SofiaPro', Helvetica, Arial, sans-serif !important; text-align: left; font-size: 12px !important; line-height: 130% !important; padding-top: 30px; padding-bottom: 0px; font-weight: normal;">
+                                                    <strong>Club Arena processes user and member data in compliance with
+                                                        applicable privacy regulations.</strong>
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /DISCLAIMER 2 === --->
+
+                                            <!-- === DISCLAIMER 3 === --->
+                                            <tr>
+                                                <td
+                                                    style="color: rgba(255, 255, 255, 0.90); font-family: 'SofiaPro', Helvetica, Arial, sans-serif !important; text-align: left; font-size: 12px !important; line-height: 130% !important; padding-top: 30px; padding-bottom: 0px; font-weight: normal;">
+                                                    Club Arena’s support materials, including FAQs, tutorials, and help
+                                                    articles, are intended for informational purposes only. For
+                                                    personalized guidance, contact your account representative or
+                                                    support team.
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /DISCLAIMER 3 === --->
+
+                                            <!-- === DISCLAIMER 4 === --->
+                                            <tr>
+                                                <td
+                                                    style="color: rgba(255, 255, 255, 0.90); font-family: 'SofiaPro', Helvetica, Arial, sans-serif !important; text-align: left; font-size: 12px !important; line-height: 130% !important; padding-top: 30px; padding-bottom: 0px; font-weight: normal;">
+                                                    While Club Arena strives for continuous uptime, temporary
+                                                    interruptions may occur due to system maintenance or network issues.
+                                                    Notifications of planned maintenance will be communicated in advance
+                                                    whenever possible.
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /DISCLAIMER 4 === --->
+
+                                            <!-- === APP MODULE === --->
+                                            <tr>
+                                                <td class="padt20" align="center" style="padding-top: 40px;">
+                                                    <table class="w100" width="700" border="0" align="center"
+                                                        cellpadding="0" cellspacing="0"
+                                                        style="background-color: #1C1C1C; border-radius: 20px;">
+                                                        <tr>
+                                                            <td>
+
+                                                                <!-- *OBJECT 1* --->
+                                                                <table class="w100" width="350" border="0" align="left"
+                                                                    cellpadding="0" cellspacing="0"
+                                                                    style="float: left;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0" align="left"
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td class="padt30"
+                                                                                        style="padding-top: 52px;">
+                                                                                        <table width="100%" border="0"
+                                                                                            align="left" cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!--- headline --->
+                                                                                            <tr>
+                                                                                                <td class="padb10"
+                                                                                                    style="padding-bottom: 16px; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; font-size: 14px; line-height: 130%; font-weight: 400; color: #fff;">
+                                                                                                    Download the free
+                                                                                                    Club Arena app
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /headline --->
+
+                                                                                            <!--- subheadline --->
+                                                                                            <tr>
+                                                                                                <td class="padb15"
+                                                                                                    style="padding-bottom: 24px; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; font-size: 25px; line-height: 105%; font-weight: 400; color: #fff;">
+                                                                                                    Find a <br />free
+                                                                                                    field!
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /subheadline --->
+
+                                                                                            <!-- qr code - desktop -->
+                                                                                            <tr>
+                                                                                                <td class="mobile-hide"
+                                                                                                    align="center"
+                                                                                                    style="padding-bottom: 12px;">
+                                                                                                    <table width="178"
+                                                                                                        border="0"
+                                                                                                        align="center"
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0"
+                                                                                                        style="background-color: #2D2D2D; border-radius: 8px;">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                align="center">
+                                                                                                                <table
+                                                                                                                    width="170"
+                                                                                                                    border="0"
+                                                                                                                    align="center"
+                                                                                                                    cellpadding="0"
+                                                                                                                    cellspacing="0">
+                                                                                                                    <tr>
+                                                                                                                        <td width="85"
+                                                                                                                            style="font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; font-size: 12px; line-height: 115%; font-weight: 400; color: #fff;">
+                                                                                                                            Download<br>the
+                                                                                                                            app
+                                                                                                                        </td>
+                                                                                                                        <td width="85"
+                                                                                                                            align="right"
+                                                                                                                            style="padding-top: 5px; padding-bottom: 5px;">
+                                                                                                                            <img src="https://braze-images.com/appboy/communication/assets/image_assets/images/66ff154ff4495b0066c3604e/original.png?1727993167"
+                                                                                                                                alt="QR Code"
+                                                                                                                                width="76"
+                                                                                                                                role="presentation"
+                                                                                                                                aria-hidden="true"
+                                                                                                                                style="border: none; width: 76px; max-width: 100%; vertical-align: bottom;">
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!-- /qr code - desktop -->
+
+                                                                                            <!--- cta - mobile --->
+                                                                                            <tr>
+                                                                                                <td class="showm"
+                                                                                                    style="display: none; padding-bottom: 12px;">
+                                                                                                    <table width="180"
+                                                                                                        align="center"
+                                                                                                        border="0"
+                                                                                                        cellspacing="0"
+                                                                                                        cellpadding="0"
+                                                                                                        bgcolor="#fff"
+                                                                                                        style="background-color:#fff; border-radius: 100px;">
+                                                                                                        <tr>
+                                                                                                            <td valign="middle"
+                                                                                                                align="center"
+                                                                                                                height="48"
+                                                                                                                style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif;font-size:17px; line-height:20px; border-radius: 100px;">
+                                                                                                                <a class="button-border-white"
+                                                                                                                    href="#"
+                                                                                                                    target="_blank"
+                                                                                                                    style="color:#000; display:block; text-decoration:none;line-height:48px; border: 2px solid #fff; border-radius: 100px; font-weight: 400;"><span
+                                                                                                                        class="buttontext-black"><img
+                                                                                                                            src="https://braze-images.com/appboy/communication/assets/image_assets/images/6711868d04a07d006464b0f7/original.png?1729201805"
+                                                                                                                            width="12"
+                                                                                                                            style="display: inline; border: 0;">&nbsp;&nbsp;Download
+                                                                                                                        now</span></a>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /cta - mobile --->
+
+                                                                                            <!--- copy --->
+                                                                                            <tr>
+                                                                                                <td class="padb0"
+                                                                                                    style="padding-bottom: 20px; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif; text-align: center; font-size: 12px; line-height: 130%; font-weight: 400; color: rgba(255, 255, 255, 0.51);">
+                                                                                                    For iOS and Android
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!--- /copy --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- */OBJECT 1* --->
+
+                                                                <!--[if mso]></td>
+                                  <td valign="top"><![endif]-->
+
+                                                                <!-- */OBJECT 2* --->
+                                                                <table class="w100" width="350" border="0" align="right"
+                                                                    cellpadding="0" cellspacing="0"
+                                                                    style="float: right;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0" align="left"
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="100%" border="0"
+                                                                                            align="center"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!-- img - desktop --->
+                                                                                            <tr>
+                                                                                                <td class="mobile-hide"
+                                                                                                    align="center">
+                                                                                                    <a href="#"
+                                                                                                        target="_blank"
+                                                                                                        style="text-decoration: none;">
+                                                                                                        <img class="w100"
+                                                                                                            src="app.jpg"
+                                                                                                            alt=""
+                                                                                                            width="350"
+                                                                                                            role="presentation"
+                                                                                                            aria-hidden="true"
+                                                                                                            style="border: none; text-decoration: none; vertical-align: bottom; border-radius: 20px;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!-- /img - desktop --->
+
+                                                                                            <!-- img - mobile --->
+                                                                                            <tr>
+                                                                                                <td class="showm"
+                                                                                                    align="center"
+                                                                                                    style="display: none;">
+                                                                                                    <a href="#"
+                                                                                                        target="_blank"
+                                                                                                        style="text-decoration: none;">
+                                                                                                        <img class="w100"
+                                                                                                            src="app.png"
+                                                                                                            alt=""
+                                                                                                            width="350"
+                                                                                                            role="presentation"
+                                                                                                            aria-hidden="true"
+                                                                                                            style="border: none; text-decoration: none; vertical-align: bottom; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;">
+                                                                                                    </a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                            <!-- /img - mobile --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- */OBJECT 2* --->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /APP MODULE === --->
+
+                                            <!-- === TWO PACK === --->
+                                            <tr>
+                                                <td class="padt20" align="center" style="padding-top: 40px;">
+                                                    <table class="w90" width="100%" border="0" align="left"
+                                                        cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td>
+
+                                                                <!-- *OBJECT 1* --->
+                                                                <table class="w100" width="350" border="0" align="right"
+                                                                    cellpadding="0" cellspacing="0"
+                                                                    style="float: right;">
+                                                                    <tr>
+                                                                        <td>
+                                                                            <table width="100%" border="0" align="left"
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td>
+                                                                                        <table width="100%" border="0"
+                                                                                            align="left" cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!-- === SOCIAL ICONS === --->
+                                                                                            <tr>
+                                                                                                <td align="left">
+                                                                                                    <table class="w100"
+                                                                                                        width="240"
+                                                                                                        border="0"
+                                                                                                        align="right"
+                                                                                                        cellpadding="0"
+                                                                                                        cellspacing="0">
+                                                                                                        <tr>
+                                                                                                            <td
+                                                                                                                align="left">
+                                                                                                                <table
+                                                                                                                    width="240"
+                                                                                                                    border="0"
+                                                                                                                    align="left"
+                                                                                                                    cellpadding="0"
+                                                                                                                    cellspacing="0">
+                                                                                                                    <tr>
+                                                                                                                        <td
+                                                                                                                            width="48">
+                                                                                                                            <a href="#"
+                                                                                                                                target="_blank"
+                                                                                                                                style="text-decoration: none;">
+                                                                                                                                <img alt="Facebook"
+                                                                                                                                    border="0"
+                                                                                                                                    height="48"
+                                                                                                                                    src="social/fb.webp"
+                                                                                                                                    width="48"
+                                                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 8px; color: #1f1f1f; display: block;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                        <td style="font-size:0pt; line-height:0pt;"
+                                                                                                                            width="16">
+                                                                                                                            &nbsp;
+                                                                                                                        </td>
+                                                                                                                        <td
+                                                                                                                            width="48">
+                                                                                                                            <a href="#"
+                                                                                                                                target="_blank"
+                                                                                                                                style="text-decoration: none;">
+                                                                                                                                <img alt="Twitter"
+                                                                                                                                    border="0"
+                                                                                                                                    height="48"
+                                                                                                                                    src="social/x.webp"
+                                                                                                                                    width="48"
+                                                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 8px; color: #1f1f1f; display: block;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                        <td style="font-size:0pt; line-height:0pt;"
+                                                                                                                            width="16">
+                                                                                                                            &nbsp;
+                                                                                                                        </td>
+                                                                                                                        <td
+                                                                                                                            width="48">
+                                                                                                                            <a href="#"
+                                                                                                                                target="_blank"
+                                                                                                                                style="text-decoration: none;">
+                                                                                                                                <img alt="Instagram"
+                                                                                                                                    border="0"
+                                                                                                                                    height="48"
+                                                                                                                                    src="social/insta.webp"
+                                                                                                                                    width="48"
+                                                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 8px; color: #1f1f1f; display: block;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                        <td style="font-size:0pt; line-height:0pt;"
+                                                                                                                            width="16">
+                                                                                                                            &nbsp;
+                                                                                                                        </td>
+                                                                                                                        <td
+                                                                                                                            width="48">
+                                                                                                                            <a href="#"
+                                                                                                                                target="_blank"
+                                                                                                                                style="text-decoration: none;">
+                                                                                                                                <img alt="TikTok"
+                                                                                                                                    border="0"
+                                                                                                                                    height="48"
+                                                                                                                                    src="social/tiktok.webp"
+                                                                                                                                    width="48"
+                                                                                                                                    style="font-family:'SofiaPro','Helvetica Neue',Helvetica,Arial,sans-serif; font-size: 8px; color: #1f1f1f; display: block;">
+                                                                                                                            </a>
+                                                                                                                        </td>
+                                                                                                                    </tr>
+                                                                                                                </table>
+                                                                                                            </td>
+                                                                                                        </tr>
+                                                                                                    </table>
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!-- === /SOCIAL ICONS === --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- */OBJECT 1* --->
+
+                                                                <!--[if mso]></td>
+                      <td valign="top"><![endif]-->
+
+                                                                <!-- */OBJECT 2* --->
+                                                                <table class="w100" width="350" border="0" align="left"
+                                                                    cellpadding="0" cellspacing="0"
+                                                                    style="float: left;">
+                                                                    <tr>
+                                                                        <td valign="bottom">
+                                                                            <table width="100%" border="0" align="left"
+                                                                                cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td class="padt20" valign="bottom">
+                                                                                        <table width="100%" border="0"
+                                                                                            align="center"
+                                                                                            cellpadding="0"
+                                                                                            cellspacing="0">
+
+                                                                                            <!-- === FOOTER CONTENT BLOCK === --->
+                                                                                            <tr>
+                                                                                                <td
+                                                                                                    style="color: rgba(255, 255, 255, 0.90); font-size: 10px; line-height: 12px; text-align: left; font-family: 'SofiaPro', 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                                                                                    © 2025 Club Arena,
+                                                                                                    Inc.<br>
+                                                                                                    2269 Chestnut Street
+                                                                                                    #523 | San Francisco
+                                                                                                    | CA 94123<br>
+                                                                                                    <a href="#"
+                                                                                                        style="color: rgba(255, 255, 255, 0.90); text-decoration: none;">Privacy
+                                                                                                        policy</a> | <a
+                                                                                                        href="#"
+                                                                                                        style="color: rgba(255, 255, 255, 0.90); text-decoration: none;">Terms
+                                                                                                        of
+                                                                                                        service</a><br>
+
+                                                                                                </td>
+                                                                                            </tr>
+
+                                                                                            <!-- === /FOOTER CONTENT BLOCK === --->
+                                                                                        </table>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+
+                                                                <!-- */OBJECT 2* --->
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /TWO PACK === --->
+
+                                            <!-- === LOGO === --->
+                                            <tr>
+                                                <td>
+                                                    <table width="100%" border="0" align="center" cellpadding="0"
+                                                        cellspacing="0">
+                                                        <tr>
+                                                            <td class="padt20 padb15" align="center"
+                                                                style="padding-top: 40px; padding-bottom: 40px;">
+                                                                <table width="100%" border="0" align="center"
+                                                                    cellpadding="0" cellspacing="0">
+                                                                    <tr>
+                                                                        <td align="center">
+                                                                            <a href="#" target="_blank"
+                                                                                style="text-decoration: none;">
+                                                                                <img class="w100" src="logo.svg"
+                                                                                    alt="hims" width="700"
+                                                                                    role="presentation"
+                                                                                    aria-hidden="true"
+                                                                                    style="border: none; width: 700px; max-width: 100%; font-family: Georgia, serif; font-size: 40px; font-weight: 600; color:#383838; text-align:center; display: block;">
+                                                                            </a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+
+                                            <!-- === /LOGO === --->
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <!-- *** /FOOTER TABLE *** -->
+</body>
+
+</html>
